@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".player">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:text="Song name"
+            android:textAlignment="center"
+            android:textColor="#FFFDFD"
+            android:textSize="22dp"
+            android:textStyle="italic">
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/ic_music">
+
+        </ImageView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <SeekBar
+                android:layout_centerInParent="true"
+                android:layout_width="250dp"
+                android:id="@+id/seekbar"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="20dp"
+                android:layout_height="wrap_content">
+
+            </SeekBar>
+            <TextView
+                android:id="@+id/tp2"
+                android:layout_toLeftOf="@+id/seekbar"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:text="0:10"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/tp3"
+                android:layout_toRightOf="@+id/seekbar"
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="false"
+                android:layout_marginLeft="5dp"
+                android:text="4:10"
+                android:textColor="#FFFDFD"
+                android:textSize="14dp"
+                android:textStyle="italic">
+
+            </TextView>
+
+
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:id="@+id/plybtn"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/ic_paus"
+                />
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/btnnxt"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/plybtn"
+                android:background="@drawable/ic_next"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                />
+
+
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:id="@+id/btnprev"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/plybtn"
+                android:background="@drawable/ic_previous"
+                android:layout_centerHorizontal="true"
+                />
+
+            <com.gauravk.audiovisualizer.visualizer.BlastVisualizer
+                xmlns:custom="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/blast"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                custom:avDensity="0.8"
+                custom:avType="fill"
+                custom:avColor="@color/av_dark_blue"
+                custom:avSpeed="normal"/>
+
+
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
